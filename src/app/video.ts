@@ -1,11 +1,15 @@
+import {Avis} from '../app/avis'
+import {Auteur} from '../app/auteur'
+
 export interface Video {
     nom: string;
     description: string;
     code: string;
-    catégories: string;
-    auteur: string;
+    categories: string[];
+    auteur: Auteur;
     datePublication: Date;
-    durée: number;
+    duree: number;
     nombreVues: number;
-    avis: string;
+    avis: Avis[];
+    url_image: string;
 }

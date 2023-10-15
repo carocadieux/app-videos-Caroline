@@ -1,0 +1,33 @@
+<!--<app-video
+    [nom]="video.nom" 
+    [description]="video.description" 
+    [code]="video.code"
+    [categories]="video.categories"
+    [auteur]="video.auteur"
+    [datePublication]="video.datePublication"
+    [duree]="video.duree"
+    [nombreVues]="video.nombreVues"
+    [avis]="video.avis"
+
+></app-video>-->
+
+<div class="video-details">
+    <img src="{{video.url_image}}" alt="">
+    <h2>{{ video.nom }}</h2>
+    <p>{{ video.description }}</p>
+    <p>Code: {{ video.code }}</p>
+    <p>Catégories: {{ video.categories.join(', ') }}</p>
+    <p>Auteur: {{ video.auteur.nom }}</p>
+    <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
+    <p>Durée: {{ video.duree }} seconds</p>
+    <p>Nombre de vues: {{ video.nombreVues }}</p>
+  
+    <h3>Avis:</h3>
+    <ul>
+      <li *ngFor="let avis of video.avis">
+        <p>Note: {{ avis.note }}</p>
+        <p>Commentaires: {{ avis.commentaires }}</p>
+      </li>
+    </ul>
+  </div>
+

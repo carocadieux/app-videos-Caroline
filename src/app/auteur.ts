@@ -1,5 +1,4 @@
 export interface Auteur {
-    nomAuteur: string;
-    coordonnées: string;
+    nom: string;
     description: string;
 }
