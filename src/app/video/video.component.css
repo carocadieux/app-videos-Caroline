@@ -1,6 +1,6 @@
 :host{
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    
     background-color: rgb(221, 171, 228);
     margin: 10px;
     border: 2px solid black;

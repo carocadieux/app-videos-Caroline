@@ -1,0 +1,8 @@
+<div class="video-thumnail-details">
+    <img src="{{video.url_image}}" alt="">
+    <h2>{{ video.nom }}</h2>    
+    <p>Auteur: {{ video.auteur.nom }}</p>
+    <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
+    <p>Durée: {{ video.duree }} seconds</p>
+    <p>Nombre de vues: {{ video.nombreVues }}</p>   
+</div>
