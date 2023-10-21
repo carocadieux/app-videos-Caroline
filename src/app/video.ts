@@ -12,4 +12,5 @@ export interface Video {
     nombreVues: number;
     avis: Avis[];
     url_image: string;
+    score_video: number;
 }

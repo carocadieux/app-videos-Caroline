@@ -12,10 +12,12 @@ export class VideoComponent {
     nom: "",
     description: "",
     code: "",
+    score_video: 0,
     categories: [],
     auteur: {
       nom: "",
       description: "",
+      auteur_verifier: '',
     },
     datePublication: new Date(),
     duree: 0,

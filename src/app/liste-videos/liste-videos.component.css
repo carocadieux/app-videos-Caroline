@@ -1,5 +1,5 @@
-:host{
-    
+/*:host{
+    display: block;
     background-color: rgb(190, 237, 247);
     padding: 10px;
 }
@@ -9,7 +9,19 @@ section{
    
     
     
-}
+}*/
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+  
+  app-video {
+    display: block; /* Assurez-vous que app-video est affiché en tant que bloc */
+    margin-top: 10px; /* Ajoute de l'espace en haut pour l'espacement */
+  }
+  
 
 
 

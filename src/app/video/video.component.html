@@ -16,6 +16,7 @@
     <h2>{{ video.nom }}</h2>
     <p>{{ video.description }}</p>
     <p>Code: {{ video.code }}</p>
+    <p>{{video.score_video}}</p>
     <p>Catégories: {{ video.categories.join(', ') }}</p>
     <p>Auteur: {{ video.auteur.nom }}</p>
     <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
