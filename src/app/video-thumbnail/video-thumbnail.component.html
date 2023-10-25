@@ -2,7 +2,11 @@
     <img src="{{video.url_image}}" alt="">
     <h2>{{ video.nom }}</h2>    
     <p>Auteur: {{ video.auteur.nom }}
-        <span *ngIf="video.auteur.verifier === 'true'">✔️</span>
+        <span *ngIf="video.auteur.verifier === 'true'">
+            <span class="material-icons">
+                verified
+            </span>
+        </span>
     </p>
     <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
     <p>Durée: {{ video.duree }} seconds</p>

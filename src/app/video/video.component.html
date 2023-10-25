@@ -8,7 +8,11 @@
     <p>{{video.score_video}}</p>
     <p>Catégories: {{ video.categories.join(', ') }}</p>
     <p>Auteur: {{ video.auteur.nom }}
-      <span *ngIf="video.auteur.verifier === 'true'">✔️</span>
+      <span *ngIf="video.auteur.verifier === 'true'">
+        <span class="material-icons">
+          verified
+        </span>
+      </span>
     </p>
     <p>{{video.auteur.description}}</p>
     <p>{{video.auteur.verifier}}</p>
