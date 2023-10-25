@@ -11,11 +11,11 @@ section{
     
 }*/
 
-section {
+/*section {
     display: flex;
     flex-direction: row;
     align-items: center; /* Centre les éléments horizontalement */
-  }
+  /*}*/
   
   app-video {
     display: block; /* Assurez-vous que app-video est affiché en tant que bloc */

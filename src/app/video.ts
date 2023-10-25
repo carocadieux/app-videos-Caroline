@@ -1,12 +1,12 @@
 import {Avis} from '../app/avis'
-import {Auteur} from '../app/auteur'
+import {Utilisateur} from './utilisateur'
 
 export interface Video {
     nom: string;
     description: string;
     code: string;
     categories: string[];
-    auteur: Auteur;
+    auteur: Utilisateur;
     datePublication: Date;
     duree: number;
     nombreVues: number;

@@ -1,13 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Video } from '../video';
 
+
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.css']
 })
 export class VideoComponent {
-  @Input() video:Video = {
+ @Input() video:Video = {
     url_image: "",
     nom: "",
     description: "",
@@ -17,7 +18,7 @@ export class VideoComponent {
     auteur: {
       nom: "",
       description: "",
-      auteur_verifier: '',
+      verifier: '',
     },
     datePublication: new Date(),
     duree: 0,
@@ -28,6 +29,14 @@ export class VideoComponent {
         commentaires: "",
       }
     ]
+    
                     
   };
+
+  
+
 }
+
+
+
+

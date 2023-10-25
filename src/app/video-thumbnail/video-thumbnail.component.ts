@@ -17,7 +17,7 @@ export class VideoThumbnailComponent {
     auteur: {
       nom: "",
       description: "",
-      auteur_verifier: '',
+      verifier: '',
     },
     datePublication: new Date(),
     duree: 0,

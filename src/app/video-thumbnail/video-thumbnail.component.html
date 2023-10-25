@@ -1,7 +1,9 @@
 <div class="video-thumnail-details">
     <img src="{{video.url_image}}" alt="">
     <h2>{{ video.nom }}</h2>    
-    <p>Auteur: {{ video.auteur.nom }}</p>
+    <p>Auteur: {{ video.auteur.nom }}
+        <span *ngIf="video.auteur.verifier === 'true'">✔️</span>
+    </p>
     <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
     <p>Durée: {{ video.duree }} seconds</p>
     <p>Nombre de vues: {{ video.nombreVues }}</p>   
