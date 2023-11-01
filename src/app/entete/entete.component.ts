@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-entete',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./entete.component.css']
 })
 export class EnteteComponent {
-
+  
 }

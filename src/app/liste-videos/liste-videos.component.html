@@ -1,14 +1,17 @@
 
 <h2>Liste de videos</h2>
-<section>
+<section  class="menu">
+    <app-menu></app-menu>
+</section>
+
     <div ngClass="thumbnail">
         <app-liste-videos-thumbnail></app-liste-videos-thumbnail>
     </div>
-</section>
-<section>
+
+
     <div  ngClass="video-details">
         <app-video [video]="videos[0]"></app-video>
 
     </div>
-</section>
+
 

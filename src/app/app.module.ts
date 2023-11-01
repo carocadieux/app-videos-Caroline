@@ -12,6 +12,7 @@ import { ListeVideosThumbnailComponent } from './liste-videos-thumbnail/liste-vi
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EnteteComponent } from './entete/entete.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
     VideoThumbnailComponent,
     ListeVideosThumbnailComponent,
     EnteteComponent,
-    UtilisateurComponent
+    UtilisateurComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
