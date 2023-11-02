@@ -1,2 +1,8 @@
-<p>{{user.nom}}</p>
-<p>{{user.verifier}}</p>
+<p>Utilisateur:{{user.nom}}
+    <span *ngIf="user.verifier === 'true'">
+        <span class="material-icons">
+            verified
+        </span>
+    </span>
+</p>
+

@@ -7,7 +7,7 @@ export const VIDEOS: Video[] = [
     nom: 'Halloween',
     description: 'lorem',
     code: '',
-    score_video: 0,
+    score_video: 235,
     categories: ['Horeur', 'Action', 'Comedie', 'Romantique'],
     auteur: {
         nom: 'John Carpenter',
@@ -31,7 +31,7 @@ export const VIDEOS: Video[] = [
         nom: 'Halloween',
         description: 'lorem',
         code: '',
-        score_video: 0,
+        score_video: 6425,
         categories: [],
         auteur: {
             nom: 'John Carpenter',
@@ -53,7 +53,7 @@ export const VIDEOS: Video[] = [
             nom: 'Halloween',
             description: 'lorem',
             code: '',
-            score_video: 0,
+            score_video: 68,
             categories: [],
             auteur: {
                 nom: 'John Carpenter',
@@ -76,7 +76,7 @@ export const VIDEOS: Video[] = [
                 nom: 'Halloween',
                 description: 'lorem',
                 code: '',
-                score_video: 0,
+                score_video: 9564,
                 categories: [],
                 auteur: {
                     nom: 'John Carpenter',
@@ -99,7 +99,7 @@ export const VIDEOS: Video[] = [
                     nom: 'Halloween',
                     description: 'lorem',
                     code: '',
-                    score_video: 0,
+                    score_video: 4698,
                     categories: [],
                     auteur: {
                         nom: 'John Carpenter',
