@@ -11,5 +11,18 @@
     <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
     <p>Durée: {{ video.duree }} seconds</p>
     <p>Nombre de vues: {{ video.nombreVues }}</p>
-    <p>Score: {{video.score_video}}</p>   
+    <p>Score: {{video.score_video}}</p>
+    <div [ngClass]="{'hot': video.score_video > 5000}" *ngIf="video.score_video > 5000">
+        <span class="material-icons">
+            local_fire_department
+        </span>
+    </div>
+    <div [ngClass]="{'cold': video.score_video > 5000}" *ngIf="video.score_video < 5000">
+        <span class="material-icons">
+            ac_unit
+        </span>
+    </div>
+       
 </div>
+
+
