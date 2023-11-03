@@ -2,6 +2,18 @@
 
 <div class="video-details">
     <img src="{{video.url_image}}" alt="">
+    <p *ngFor="let sous_titres of video.sous_titres">{{ video.sous_titres.join(', ') }}</p>
+      <span *ngIf="video.sous_titres.includes('cc'); else stIconTemplate">
+        <span class="material-icons">
+          closed_caption
+        </span>
+      </span>
+      <ng-template #stIconTemplate>  
+          <span class="material-icons">
+            subtitles
+          </span>
+        
+        </ng-template>
     <h2>{{ video.nom }}</h2>
     <p>{{ video.description }}</p>
     <p>Code: {{ video.code }}</p>

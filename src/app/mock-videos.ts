@@ -3,7 +3,7 @@ import { Video } from "./video";
 export const VIDEOS: Video[] = [
     {
     url_image:'https://picsum.photos/seed/picsum/200/300', 
-    sous_titres: ['cc'],
+    sous_titres: ['st'],
     nom: 'Halloween',
     description: 'lorem',
     code: '',
@@ -51,7 +51,7 @@ export const VIDEOS: Video[] = [
         },
         {
             url_image: 'https://picsum.photos/seed/picsum/200/300',
-            sous_titres: ['cc'],
+            sous_titres: ['st'],
             nom: 'Halloween',
             description: 'lorem',
             code: '',
