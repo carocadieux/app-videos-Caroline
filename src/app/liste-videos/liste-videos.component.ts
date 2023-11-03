@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { VIDEOS } from '../mock-videos';
 import { Video } from '../video';
+import { Categories} from '../categories';
+import { CATEGORIES } from '../mock-categories';
 
 @Component({
   selector: 'app-liste-videos',
@@ -9,4 +11,5 @@ import { Video } from '../video';
 })
 export class ListeVideosComponent {
   videos: Video[] = VIDEOS;
+  categorie: Categories[] = CATEGORIES;
 }

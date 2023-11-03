@@ -8,7 +8,7 @@ export const VIDEOS: Video[] = [
     description: 'lorem',
     code: '',
     score_video: 235,
-    categories: ['Horeur', 'Action', 'Comedie', 'Romantique'],
+    categories: ['Horreur'],
     auteur: {
         nom: 'John Carpenter',
         description: 'lorem',

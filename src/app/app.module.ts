@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatChipsModule} from '@angular/material/chips';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EnteteComponent } from './entete/entete.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { MenuComponent } from './menu/menu.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { MenuComponent } from './menu/menu.component';
     ListeVideosThumbnailComponent,
     EnteteComponent,
     UtilisateurComponent,
-    MenuComponent
+    MenuComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { MenuComponent } from './menu/menu.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatToolbarModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

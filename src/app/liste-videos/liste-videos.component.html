@@ -4,6 +4,15 @@
     <app-menu></app-menu>
 </section>
 
+    <ng-container *ngFor="let c of categorie">
+        <mat-chip>
+            <div class="categories">
+                <app-categories href=""[categorie]="c"></app-categories>
+            </div>
+        </mat-chip>
+    </ng-container>
+
+
     <div ngClass="thumbnail">
         <app-liste-videos-thumbnail></app-liste-videos-thumbnail>
     </div>
