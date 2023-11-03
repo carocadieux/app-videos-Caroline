@@ -10,6 +10,7 @@ import { Video } from '../video';
 export class VideoComponent {
  @Input() video:Video = {
     url_image: "",
+    sous_titres: [],
     nom: "",
     description: "",
     code: "",

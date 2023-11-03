@@ -1,4 +1,5 @@
 import {Avis} from '../app/avis'
+import { SousTitres } from './sous-titres';
 import {Utilisateur} from './utilisateur'
 
 export interface Video {
@@ -13,4 +14,5 @@ export interface Video {
     avis: Avis[];
     url_image: string;
     score_video: number;
+    sous_titres: string[],
 }
