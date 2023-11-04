@@ -2,7 +2,9 @@
 
 <div class="video-details">
     <img src="{{video.url_image}}" alt="">
-    <p *ngFor="let sous_titres of video.sous_titres">{{ video.sous_titres.join(', ') }}</p>
+
+    <section class="infos-chiffres">
+      <div *ngFor="let sous_titres of video.sous_titres"></div>
       <span *ngIf="video.sous_titres.includes('cc'); else stIconTemplate">
         <span class="material-icons">
           closed_caption
@@ -12,30 +14,40 @@
           <span class="material-icons">
             subtitles
           </span>
-        
-        </ng-template>
-    <h2>{{ video.nom }}</h2>
-    <p>{{ video.description }}</p>
-    <p>Code: {{ video.code }}</p>
-    <p>{{video.score_video}}</p>
-    <p>Catégories: {{ video.categories.join(', ') }}</p>
-    <p>Auteur: {{ video.auteur.nom }}
-      <span *ngIf="video.auteur.verifier === 'true'">
-        <span class="material-icons">
-          verified
+      </ng-template>
+      <p>Code: {{ video.code }}</p>
+      <p>Score vidéo:{{video.score_video}}</p>
+      <p>Nombre de vues: {{ video.nombreVues }}</p>
+      <p>Durée: {{ video.duree }} seconds</p>
+    </section>
+
+    <section class="infos-film">
+      <h2>{{ video.nom }}</h2>
+      <p>{{ video.description }}</p>
+      <p>Catégories: {{ video.categories.join(', ') }}</p>
+      <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
+    </section>
+
+    <section class="infos-auteur">
+      <p>Auteur: {{ video.auteur.nom }}
+        <span *ngIf="video.auteur.verifier === 'true'">
+          <span class="material-icons">
+            verified
+          </span>
         </span>
-      </span>
-    </p>
-    <p>{{video.auteur.description}}</p>
+      </p>
+      <p>{{video.auteur.description}}</p>
+    </section>
     
-    <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
-    <p>Durée: {{ video.duree }} seconds</p>
-    <p>Nombre de vues: {{ video.nombreVues }}</p>
-  
-    <h3>Avis:</h3>
-    <ul *ngFor="let avis of video.avis">
-      <li>Note: {{ avis.note }}</li>
-      <li>Commentaires: {{ avis.commentaires }}</li>
-    </ul>
+    
+    
+    <section class="avis">
+      <h3>Avis:</h3>
+      <ul *ngFor="let avis of video.avis">
+        <li>Note: {{ avis.note }}</li>
+        <li>Commentaires: {{ avis.commentaires }}</li>
+      </ul>
+    </section>
+
 </div>
 

@@ -1,17 +1,19 @@
 
-<h2>Liste de videos</h2>
+
 <section  class="menu">
     <app-menu></app-menu>
 </section>
 
+<div>
+<section  class="categories">
     <ng-container *ngFor="let c of categorie">
         <mat-chip>
-            <div class="categories">
+            <div>
                 <app-categories href=""[categorie]="c"></app-categories>
             </div>
         </mat-chip>
     </ng-container>
-
+</section>
 
     <div ngClass="thumbnail">
         <app-liste-videos-thumbnail></app-liste-videos-thumbnail>
@@ -22,5 +24,5 @@
         <app-video [video]="videos[0]"></app-video>
 
     </div>
-
+</div>
 
