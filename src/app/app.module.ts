@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +18,7 @@ import { EnteteComponent } from './entete/entete.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { MenuComponent } from './menu/menu.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { FormulaireVideoComponent } from './formulaire-video/formulaire-video.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,8 @@ import { CategoriesComponent } from './categories/categories.component';
     EnteteComponent,
     UtilisateurComponent,
     MenuComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    FormulaireVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,10 @@ import { CategoriesComponent } from './categories/categories.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatToolbarModule,
-    MatChipsModule
+    MatChipsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
