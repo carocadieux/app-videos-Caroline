@@ -1,5 +1,4 @@
 import {Avis} from '../app/avis'
-import { SousTitres } from './sous-titres';
 import {Utilisateur} from './utilisateur'
 
 export interface Video {

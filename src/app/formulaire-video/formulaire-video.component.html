@@ -1,1 +1,41 @@
-<form></form>
+<form>
+    <mat-form-field>
+        <mat-label>Nom du vidéo</mat-label>
+        <input matInput type="text" name="nom" [(ngModel)]="video.nom">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput type="text" name="nom" [(ngModel)]="video.description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Catégories</mat-label>
+
+        <mat-chip-grid #chipGrid aria-label="categorie selection">
+            <mat-chip *ngFor="let categorie of video.categories">
+              {{categorie}}
+              <button matChipRemove [attr.aria-label]="'remove '">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip>
+          </mat-chip-grid>
+        
+        <input matInput 
+            type="text" 
+            name="categorie" 
+            [(ngModel)]="video.categories"
+            [matAutocomplete]="auto"
+        />
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let categorie of video.categories" [value]="categorie">
+                {{categorie}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="text" name="code" [(ngModel)]="video.code">
+    </mat-form-field>
+    
+</form>

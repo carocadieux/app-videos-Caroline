@@ -6,6 +6,9 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +46,9 @@ import { FormulaireVideoComponent } from './formulaire-video/formulaire-video.co
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    FormsModule,
+    MatAutocompleteModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

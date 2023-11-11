@@ -9,8 +9,8 @@
     display: block; 
     margin-top: 10px; 
   }
-  .menu{
-    width: 10%;
+  .menu-liste{
+    width: 30%;
     margin: 10px 30px 10px 10px;
   }
 
@@ -21,6 +21,11 @@
   }
   mat-chip{
     margin: 0 20px;
+  }
+
+  .formulaire{
+    display: block;
+    margin-top: 10px;
   }
 
  
