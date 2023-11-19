@@ -1,5 +1,6 @@
 import {Avis} from '../app/avis'
 import {Utilisateur} from './utilisateur'
+import { Duree } from './duree';
 
 export interface Video {
     nom: string;
@@ -8,7 +9,7 @@ export interface Video {
     categories: string[];
     auteur: Utilisateur;
     datePublication: Date;
-    duree: number;
+    duree: Duree;
     nombreVues: number;
     avis: Avis[];
     url_image: string;

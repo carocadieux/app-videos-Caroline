@@ -9,16 +9,16 @@
         <textarea matInput type="text" name="nom" [(ngModel)]="video.description"></textarea>
     </mat-form-field>
 
-    <mat-form-field>
+    <!--<mat-form-field>
         <mat-label>Catégories</mat-label>
 
         <mat-chip-grid #chipGrid aria-label="categorie selection">
-            <mat-chip *ngFor="let categorie of video.categories">
+            <mat-chip-row *ngFor="let categorie of video.categories">
               {{categorie}}
               <button matChipRemove [attr.aria-label]="'remove '">
                 <mat-icon>cancel</mat-icon>
               </button>
-            </mat-chip>
+            </mat-chip-row>
           </mat-chip-grid>
         
         <input matInput 
@@ -32,10 +32,65 @@
                 {{categorie}}
             </mat-option>
         </mat-autocomplete>
-    </mat-form-field>
+    </mat-form-field>-->
 
     <mat-form-field>
         <input matInput type="text" name="code" [(ngModel)]="video.code">
     </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Choisir la date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-card>
+        <mat-card-content>
+          <h2 class="slider">Slider configuration</h2>
+      
+          <section class="example-section">
+            <mat-form-field class="example-margin example-width">
+              <mat-label>Value</mat-label>
+              <input matInput type="number" name="value" [(ngModel)]="video.duree.value">
+            </mat-form-field>
+            <mat-form-field class="example-margin example-width">
+              <mat-label>Min value</mat-label>
+              <input matInput type="number" name="min" [(ngModel)]="video.duree.min">
+            </mat-form-field>
+            <mat-form-field class="example-margin example-width">
+              <mat-label>Max value</mat-label>
+              <input matInput type="number" name="max" [(ngModel)]="video.duree.max">
+            </mat-form-field>
+            <mat-form-field class="example-margin example-width">
+              <mat-label>Step size</mat-label>
+              <input matInput type="number" name="step" [(ngModel)]="video.duree.step">
+            </mat-form-field>
+          </section>
+      
+        </mat-card-content>
+      </mat-card>
+      
+      <mat-card class="result-card">
+        <mat-card-content>
+          <h2>Result</h2>
+      
+          <div class="example-label-container">
+            <label id="example-name-label" class="example-name-label">Value</label>
+            <label class="example-value-label">{{slider.value}}</label>
+          </div>
+          <mat-slider
+              class="example-margin"
+              [max]="video.duree.max"
+              [min]="video.duree.min"
+              [step]="video.duree.step"
+             >
+            <input matSliderThumb name="slider" [(ngModel)]="video.duree" #slider>
+          </mat-slider>
+        </mat-card-content>
+      </mat-card>
     
 </form>

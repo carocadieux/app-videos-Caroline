@@ -8,6 +8,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +53,11 @@ import { FormulaireVideoComponent } from './formulaire-video/formulaire-video.co
     MatButtonModule,
     FormsModule,
     MatAutocompleteModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSliderModule,
+    MatCardModule,
+    
     
   ],
   providers: [],

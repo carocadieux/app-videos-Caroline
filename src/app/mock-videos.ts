@@ -15,7 +15,14 @@ export const VIDEOS: Video[] = [
         verifier: 'true' ,
     },
     datePublication: new Date(1978, 10, 25),
-    duree: 1.42,
+    duree: 
+        {
+            max: 100,
+            min: 0,
+            step: 1,
+            value: 0
+        },
+    
     nombreVues: 2000,
     avis: [
             {
@@ -40,7 +47,14 @@ export const VIDEOS: Video[] = [
             verifier: 'true',
         },
         datePublication: new Date(1978, 10, 25),
-        duree: 1.42,
+        duree: 
+            {
+                max: 100,
+                min: 0,
+                step: 1,
+                value: 0
+            },
+        
         nombreVues: 0,
         avis: [
                 {
@@ -63,7 +77,14 @@ export const VIDEOS: Video[] = [
                 verifier: 'false',
             },
             datePublication: new Date(1978, 10, 25),
-            duree: 1.42,
+            duree: 
+                {
+                    max: 100,
+                    min: 0,
+                    step: 1,
+                    value: 0
+                },
+            
             nombreVues: 0,
             avis: [
                     {
@@ -87,7 +108,13 @@ export const VIDEOS: Video[] = [
                     verifier: 'false',
                 },
                 datePublication: new Date(1978, 10, 25),
-                duree: 1.42,
+                duree: 
+                    {
+                        max: 100,
+                        min: 0,
+                        step: 1,
+                        value: 0
+                    },
                 nombreVues: 0,
                 avis: [
                         {
@@ -111,7 +138,13 @@ export const VIDEOS: Video[] = [
                         verifier: 'true',
                     },
                     datePublication: new Date(1978, 10, 25),
-                    duree: 1.42,
+                    duree: 
+                        {
+                            max: 100,
+                            min: 0,
+                            step: 1,
+                            value: 0
+                        },
                     nombreVues: 0,
                     avis: [
                             {

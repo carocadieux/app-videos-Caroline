@@ -22,7 +22,14 @@ export class VideoComponent {
       verifier: '',
     },
     datePublication: new Date(),
-    duree: 0,
+    duree: 
+      {
+        max: 0,
+        min: 0,
+        step: 0,
+        value: 0,
+    },
+  
     nombreVues: 0,
     avis: [
       {
