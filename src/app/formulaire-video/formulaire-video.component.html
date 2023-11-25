@@ -35,6 +35,7 @@
     </mat-form-field>-->
 
     <mat-form-field>
+        <mat-label>Code</mat-label>
         <input matInput type="text" name="code" [(ngModel)]="video.code">
     </mat-form-field>
 
@@ -92,5 +93,44 @@
           </mat-slider>
         </mat-card-content>
       </mat-card>
-    
+
+
+      
+      <mat-form-field>
+        <mat-label>Sous-titres</mat-label>
+        <select matNativeControl required>
+          <option value="Aucun">Aucun</option>
+          <option value="Sous-titres">Sous-titres</option>
+          <option value=" Sous-titrage pour sourds et malentendants"> Sous-titrage pour sourds et malentendants</option>
+        </select>
+      </mat-form-field>
+
 </form>
+
+<form>
+
+      <mat-form-field>
+        <mat-label>auteur</mat-label>
+        <input matInput type="text" name="auteur" [(ngModel)]="video.auteur">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>nombre de vues</mat-label>
+        <input matInput type="text" name="nombre de vues" [(ngModel)]="video.nombreVues">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>score</mat-label>
+        <input matInput type="text" name="score" [(ngModel)]="video.score_video">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>avis</mat-label>
+        <input matInput type="text" name="avis" [(ngModel)]="video.avis">
+      </mat-form-field>
+      <button (click)="get();" mat-stroked-button>Soumettre</button>
+</form>
+
+      
+    
+

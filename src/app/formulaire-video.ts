@@ -1,4 +1,5 @@
 import { Duree } from './duree';
+import { SousTitres } from './sous-titres';
 
 
 export interface FormulaireVideo {
@@ -8,5 +9,5 @@ export interface FormulaireVideo {
     code : string;
     datePublication: Date;
     duree: Duree;
-    sous_titres: string;
+    sous_titres: SousTitres;
 }

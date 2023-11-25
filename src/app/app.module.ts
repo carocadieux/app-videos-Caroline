@@ -12,6 +12,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -27,6 +28,7 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { MenuComponent } from './menu/menu.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FormulaireVideoComponent } from './formulaire-video/formulaire-video.component';
+import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { FormulaireVideoComponent } from './formulaire-video/formulaire-video.co
     UtilisateurComponent,
     MenuComponent,
     CategoriesComponent,
-    FormulaireVideoComponent
+    FormulaireVideoComponent,
+    AjoutAvisComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { FormulaireVideoComponent } from './formulaire-video/formulaire-video.co
     MatNativeDateModule,
     MatSliderModule,
     MatCardModule,
+    MatSelectModule,
     
     
   ],

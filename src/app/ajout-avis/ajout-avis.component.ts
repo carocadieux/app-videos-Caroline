@@ -1,19 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { Video } from '../video';
 
-
-
-
 @Component({
-  selector: 'app-formulaire-video',
-  templateUrl: './formulaire-video.component.html',
-  styleUrls: ['./formulaire-video.component.css'],
-  
-  
-  
-  
+  selector: 'app-ajout-avis',
+  templateUrl: './ajout-avis.component.html',
+  styleUrls: ['./ajout-avis.component.css']
 })
-export class FormulaireVideoComponent {
+export class AjoutAvisComponent {
   @Input() video:Video = {
     url_image: "",
     sous_titres: [],
@@ -30,14 +23,12 @@ export class FormulaireVideoComponent {
     datePublication: new Date(),
     duree: 
       {
-        max: 100,
+        max: 0,
         min: 0,
-        step: 1,
+        step: 0,
         value: 0,
-        
-      },
-    
-    
+    },
+  
     nombreVues: 0,
     avis: [
       {
@@ -45,27 +36,5 @@ export class FormulaireVideoComponent {
         commentaires: "",
       }
     ]
-                    
-  };
-
-  get() {
-    
-    console.log(
-      this.video);
-    }
-
-  
+  }  
 }
-
-
-  
-
-  
-
-
-
-
-
-
-
-

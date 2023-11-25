@@ -65,7 +65,7 @@ export const VIDEOS: Video[] = [
         },
         {
             url_image: 'https://picsum.photos/seed/picsum/200/300',
-            sous_titres: ['st'],
+            sous_titres: ['cc'],
             nom: 'Halloween',
             description: 'lorem',
             code: '',
@@ -126,7 +126,7 @@ export const VIDEOS: Video[] = [
                 
                 {
                     url_image: 'https://picsum.photos/seed/picsum/200/300',
-                    sous_titres: [],
+                    sous_titres: ['cc'],
                     nom: 'Halloween',
                     description: 'lorem',
                     code: '',
