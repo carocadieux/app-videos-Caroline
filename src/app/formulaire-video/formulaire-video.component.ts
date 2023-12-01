@@ -21,7 +21,7 @@ export class FormulaireVideoComponent {
     description: "",
     code: "",
     score_video: 0,
-    categories: [],
+    nomCategorie: [],
     auteur: {
       nom: "",
       description: "",

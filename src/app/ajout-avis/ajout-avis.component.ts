@@ -14,7 +14,7 @@ export class AjoutAvisComponent {
     description: "",
     code: "",
     score_video: 0,
-    categories: [],
+    nomCategorie: [],
     auteur: {
       nom: "",
       description: "",

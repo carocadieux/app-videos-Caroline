@@ -18,7 +18,7 @@
       <p>Code: {{ video.code }}</p>
       <p>Score vidéo:{{video.score_video}}</p>
       <ng-container>
-        <p  matTooltip={{video.nombreVues}}>{{ video.nombreVues | nbDeVues  }}</p>
+        <p  matTooltip={{video.nombreVues}}>{{ video.nombreVues | nbDeVues   }}</p>
       </ng-container>
       <p>Durée: {{ video.duree }} seconds</p>
     </section>
@@ -26,7 +26,7 @@
     <section class="infos-film">
       <h2>{{ video.nom }}</h2>
       <p>{{ video.description }}</p>
-      <p>Catégories: {{ video.categories.join(', ') }}</p>
+      <p>Catégories: {{ video.nomCategorie.join(', ') }}</p>
       <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
     </section>
 

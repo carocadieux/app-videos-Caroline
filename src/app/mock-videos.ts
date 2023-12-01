@@ -8,7 +8,7 @@ export const VIDEOS: Video[] = [
     description: "La nuit d'Halloween 1963. Le jeune Michael Myers se précipite dans la chambre de sa soeur aînée et la poignarde sauvagement. Après son geste, Michael se mure dans le silence et est interné dans un asile psychiatrique. Quinze ans plus tard, il s'échappe de l'hôpital et retourne sur les lieux de son crime. Il s'en prend alors aux adolescents de la ville.",
     code: '',
     score_video: 7025,
-    categories: ['Horreur'],
+    nomCategorie: ['Horreur'],
     auteur: {
         nom: "John Carpenter",
         description: "John Carpenter est un réalisateur, scénariste, producteur et compositeur américain né le 16 janvier 1948 à Carthage, dans l'État de New York.",
@@ -40,7 +40,7 @@ export const VIDEOS: Video[] = [
         description: 'lorem',
         code: '',
         score_video: 6425,
-        categories: [],
+        nomCategorie: [],
         auteur: {
             nom: 'John Carpenter',
             description: 'lorem',
@@ -70,7 +70,7 @@ export const VIDEOS: Video[] = [
             description: 'lorem',
             code: '',
             score_video: 68,
-            categories: [],
+            nomCategorie: ["Comedie"],
             auteur: {
                 nom: 'John Carpenter',
                 description: 'lorem',
@@ -100,8 +100,8 @@ export const VIDEOS: Video[] = [
                 nom: 'Halloween',
                 description: 'lorem',
                 code: '',
-                score_video: 9564,
-                categories: [],
+                score_video: 564,
+                nomCategorie: [],
                 auteur: {
                     nom: 'John Carpenter',
                     description: 'lorem',
@@ -130,8 +130,8 @@ export const VIDEOS: Video[] = [
                     nom: 'Halloween',
                     description: 'lorem',
                     code: '',
-                    score_video: 4698,
-                    categories: [],
+                    score_video: 98,
+                    nomCategorie: ['Horreur'],
                     auteur: {
                         nom: 'John Carpenter',
                         description: 'lorem',

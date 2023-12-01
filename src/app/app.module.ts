@@ -32,6 +32,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { FormulaireVideoComponent } from './formulaire-video/formulaire-video.component';
 import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
 import { NbDeVuesPipe } from './nb-de-vues.pipe';
+import { PopularScoreVideosPipe } from './popular-score-videos.pipe';
+import { VideoCategoriePipe } from './video-categorie.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { NbDeVuesPipe } from './nb-de-vues.pipe';
     CategoriesComponent,
     FormulaireVideoComponent,
     AjoutAvisComponent,
-    NbDeVuesPipe
+    NbDeVuesPipe,
+    PopularScoreVideosPipe,
+    VideoCategoriePipe
   ],
   imports: [
     BrowserModule,

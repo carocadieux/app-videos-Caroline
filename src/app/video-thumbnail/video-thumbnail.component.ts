@@ -14,7 +14,7 @@ export class VideoThumbnailComponent {
     description: "",
     code: "",
     score_video: 0,
-    categories: [],
+    nomCategorie: [],
     auteur: {
       nom: "",
       description: "",
