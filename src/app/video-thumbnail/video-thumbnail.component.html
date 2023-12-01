@@ -10,7 +10,7 @@
     </p>
     <p>Date de Publication: {{ video.datePublication | date:'medium' }}</p>
     <p>Durée: {{ video.duree }} seconds</p>
-    <p>Nombre de vues: {{ video.nombreVues }}</p>
+    <p matTooltip={{video.nombreVues}}>{{ video.nombreVues | nbDeVues}}</p>
     <p>Score: {{video.score_video}}</p>
     <div [ngClass]="{'hot': video.score_video > 5000}" *ngIf="video.score_video > 5000">
         <span class="material-icons">

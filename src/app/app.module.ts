@@ -13,6 +13,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 
 
@@ -29,6 +31,7 @@ import { MenuComponent } from './menu/menu.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FormulaireVideoComponent } from './formulaire-video/formulaire-video.component';
 import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
+import { NbDeVuesPipe } from './nb-de-vues.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,8 @@ import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
     MenuComponent,
     CategoriesComponent,
     FormulaireVideoComponent,
-    AjoutAvisComponent
+    AjoutAvisComponent,
+    NbDeVuesPipe
   ],
   imports: [
     BrowserModule,
@@ -61,6 +65,8 @@ import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
     MatSliderModule,
     MatCardModule,
     MatSelectModule,
+    MatTooltipModule,
+    
     
     
   ],

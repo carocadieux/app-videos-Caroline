@@ -14,10 +14,12 @@
           <span class="material-icons">
             subtitles
           </span>
-      </ng-template>
+      </ng-template >
       <p>Code: {{ video.code }}</p>
       <p>Score vidéo:{{video.score_video}}</p>
-      <p>Nombre de vues: {{ video.nombreVues }}</p>
+      <ng-container>
+        <p  matTooltip={{video.nombreVues}}>{{ video.nombreVues | nbDeVues  }}</p>
+      </ng-container>
       <p>Durée: {{ video.duree }} seconds</p>
     </section>
 

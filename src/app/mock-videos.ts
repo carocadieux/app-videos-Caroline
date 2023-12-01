@@ -23,7 +23,7 @@ export const VIDEOS: Video[] = [
             value: 0
         },
     
-    nombreVues: 2000,
+    nombreVues: 0,
     avis: [
             {
                 note: 4,
@@ -55,7 +55,7 @@ export const VIDEOS: Video[] = [
                 value: 0
             },
         
-        nombreVues: 0,
+        nombreVues: 250000,
         avis: [
                 {
                     note: 0,
@@ -85,7 +85,7 @@ export const VIDEOS: Video[] = [
                     value: 0
                 },
             
-            nombreVues: 0,
+            nombreVues: 3000261,
             avis: [
                     {
                         note: 0,
@@ -115,7 +115,7 @@ export const VIDEOS: Video[] = [
                         step: 1,
                         value: 0
                     },
-                nombreVues: 0,
+                nombreVues: 654,
                 avis: [
                         {
                             note: 0,
@@ -145,7 +145,7 @@ export const VIDEOS: Video[] = [
                             step: 1,
                             value: 0
                         },
-                    nombreVues: 0,
+                    nombreVues: 365125,
                     avis: [
                             {
                                 note: 0,
