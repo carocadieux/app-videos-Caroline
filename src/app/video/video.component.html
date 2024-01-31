@@ -1,7 +1,7 @@
 
 
 <div class="video-details">
-    <img src="{{video.url_image}}" alt="">
+    <img [src]="video.url_image" alt="">
 
     <section class="infos-chiffres">
       <div *ngFor="let sous_titres of video.sous_titres"></div>

@@ -34,6 +34,10 @@ import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
 import { NbDeVuesPipe } from './nb-de-vues.pipe';
 import { PopularScoreVideosPipe } from './popular-score-videos.pipe';
 import { VideoCategoriePipe } from './video-categorie.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { VideoService } from './video.service';
+
+
 
 @NgModule({
   declarations: [
@@ -70,11 +74,12 @@ import { VideoCategoriePipe } from './video-categorie.pipe';
     MatCardModule,
     MatSelectModule,
     MatTooltipModule,
+    HttpClientModule,
     
     
     
   ],
-  providers: [],
+  providers: [VideoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

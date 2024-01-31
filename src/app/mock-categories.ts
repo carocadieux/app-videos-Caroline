@@ -13,5 +13,8 @@ export const CATEGORIES: Categories[] = [
     {
         nomCategorie: "Action" 
     },
+    {
+        nomCategorie: "Romance" 
+    },
 
 ]

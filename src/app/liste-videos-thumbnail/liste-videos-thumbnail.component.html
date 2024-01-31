@@ -1,3 +1,7 @@
 <div>
     <app-video-thumbnail *ngFor="let v of videos | popularScoreVideos | videoCategorie:'Comedie'" [video]="v"></app-video-thumbnail>
 </div>
+
+<div>
+    <app-video-thumbnail *ngFor="let v of videos" [video]="v"></app-video-thumbnail>
+</div>
