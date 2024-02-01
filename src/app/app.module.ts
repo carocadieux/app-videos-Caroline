@@ -14,6 +14,11 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import { CommonModule } from '@angular/common';
+
 
 
 
@@ -36,6 +41,7 @@ import { PopularScoreVideosPipe } from './popular-score-videos.pipe';
 import { VideoCategoriePipe } from './video-categorie.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { VideoService } from './video.service';
+import { TableVideoComponent } from './table-video/table-video.component';
 
 
 
@@ -54,7 +60,8 @@ import { VideoService } from './video.service';
     AjoutAvisComponent,
     NbDeVuesPipe,
     PopularScoreVideosPipe,
-    VideoCategoriePipe
+    VideoCategoriePipe,
+    TableVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +82,10 @@ import { VideoService } from './video.service';
     MatSelectModule,
     MatTooltipModule,
     HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    CommonModule,
     
     
     
