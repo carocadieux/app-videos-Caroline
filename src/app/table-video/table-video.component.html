@@ -8,3 +8,36 @@
     <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
 </table>
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Sélectionner la page des videos"></mat-paginator>
+
+
+    <form #videoForm="ngForm">
+        <mat-form-field>
+            <mat-label>Video</mat-label>
+            <input matInput placeholder="Ex. Flash" required minlength="2" maxlength="50" name="nom"
+            [(ngModel)]="video.nom" #nom="ngModel" (keyup.enter)="addVideo(videoForm)">
+        </mat-form-field>
+
+        <button mat-fab color="primary" (click)="addVideo(videoForm)" aria-label="Ajouter" [disabled]="!videoForm.form.valid">
+        <mat-icon>add</mat-icon>
+        </button>
+    </form>
+
+    <table mat-table #tableVideos [dataSource]="dataSourceVideos" matSort>
+        <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+            <td mat-cell *matCellDef="let video"> {{video.nom}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+            <td mat-cell *matCellDef="let video">
+                <button mat-icon-button aria-label="Supprimer" (click)="deleteVideo(video.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+    </table>
+        
+        

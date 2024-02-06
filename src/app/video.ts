@@ -12,7 +12,7 @@ export interface Video {
     nomCategorie: string[];
     auteur: Utilisateur;
     datePublication: Date;
-    duree: Duree;
+    duree: number;
     nombreVues: number;
     avis: Avis[];
     url_image: string;
