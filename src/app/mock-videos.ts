@@ -14,14 +14,8 @@ export const VIDEOS: Video[] = [
         description: "John Carpenter est un réalisateur, scénariste, producteur et compositeur américain né le 16 janvier 1948 à Carthage, dans l'État de New York.",
         verifier: 'true' ,
     },
-    datePublication: new Date(1978, 10, 25),
-    duree: 
-        {
-            max: 100,
-            min: 0,
-            step: 1,
-            value: 0
-        },
+    datePublication: new Date(1978, 10, 25).toString(),
+    duree: 0,
     
     nombreVues: 0,
     avis: [
@@ -46,14 +40,8 @@ export const VIDEOS: Video[] = [
             description: 'lorem',
             verifier: 'true',
         },
-        datePublication: new Date(1978, 10, 25),
-        duree: 
-            {
-                max: 100,
-                min: 0,
-                step: 1,
-                value: 0
-            },
+        datePublication: new Date(1978, 10, 25).toString(),
+        duree: 0,
         
         nombreVues: 250000,
         avis: [
@@ -76,14 +64,8 @@ export const VIDEOS: Video[] = [
                 description: 'lorem',
                 verifier: 'false',
             },
-            datePublication: new Date(1978, 10, 25),
-            duree: 
-                {
-                    max: 100,
-                    min: 0,
-                    step: 1,
-                    value: 0
-                },
+            datePublication: new Date(1978, 10, 25).toString(),
+            duree: 0,
             
             nombreVues: 3000261,
             avis: [
@@ -107,14 +89,8 @@ export const VIDEOS: Video[] = [
                     description: 'lorem',
                     verifier: 'false',
                 },
-                datePublication: new Date(1978, 10, 25),
-                duree: 
-                    {
-                        max: 100,
-                        min: 0,
-                        step: 1,
-                        value: 0
-                    },
+                datePublication: new Date(1978, 10, 25).toString(),
+                duree: 0,
                 nombreVues: 654,
                 avis: [
                         {
@@ -137,14 +113,8 @@ export const VIDEOS: Video[] = [
                         description: 'lorem',
                         verifier: 'true',
                     },
-                    datePublication: new Date(1978, 10, 25),
-                    duree: 
-                        {
-                            max: 100,
-                            min: 0,
-                            step: 1,
-                            value: 0
-                        },
+                    datePublication: new Date(1978, 10, 25).toString(),
+                    duree: 0,
                     nombreVues: 365125,
                     avis: [
                             {

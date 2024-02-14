@@ -20,14 +20,9 @@ export class AjoutAvisComponent {
       description: "",
       verifier: '',
     },
-    datePublication: new Date(),
-    duree: 
-      {
-        max: 0,
-        min: 0,
-        step: 0,
-        value: 0,
-    },
+    datePublication: new Date().toString(),
+    duree: 0,
+      
   
     nombreVues: 0,
     avis: [

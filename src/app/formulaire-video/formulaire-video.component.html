@@ -1,4 +1,4 @@
-<form>
+<form #videoForm="ngForm">
     <mat-form-field>
         <mat-label>Nom du vidéo</mat-label>
         <input matInput type="text" name="nom" [(ngModel)]="video.nom">
@@ -6,7 +6,7 @@
 
     <mat-form-field>
         <mat-label>Description</mat-label>
-        <textarea matInput type="text" name="nom" [(ngModel)]="video.description"></textarea>
+        <textarea matInput type="text" name="description" [(ngModel)]="video.description"></textarea>
     </mat-form-field><br>
 
     <!--<mat-form-field>
@@ -49,7 +49,7 @@
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-    <mat-card>
+    <!--<mat-card>
         <mat-card-content>
           <h2 class="slider">Slider configuration</h2>
       
@@ -83,7 +83,7 @@
             <label id="example-name-label" class="example-name-label">Value</label>
             <label class="example-value-label">{{slider.value}}</label>
           </div>
-          <mat-slider
+              <mat-slider
               class="example-margin"
               [max]="video.duree.max"
               [min]="video.duree.min"
@@ -92,7 +92,7 @@
             <input matSliderThumb name="slider" [(ngModel)]="video.duree" #slider>
           </mat-slider>
         </mat-card-content>
-      </mat-card>
+      </mat-card>-->
 
 
       
@@ -129,6 +129,19 @@
         <input matInput type="text" name="avis" [(ngModel)]="video.avis">
       </mat-form-field>
       <button (click)="get();" mat-stroked-button>Soumettre</button>
+
+
+      <button mat-button mat-aria-label="Annuler" [mat-dialog-close]="true">
+        Annuler
+      </button>
+
+      <button *ngIf="video.id; else boutonAjout" mat-button mat-aria-label="Modifier"
+        [disabled]="!videoForm.form.valid" (click)="updateVideo(videoForm)">Modifier</button>
+        <ng-template #boutonAjout>
+        <button mat-button mat-aria-label="Ajouter"
+        [disabled]="!videoForm.form.valid" (click)="addVideo(videoForm)">Créer</button>
+        </ng-template>
+        
 </form>
 
       

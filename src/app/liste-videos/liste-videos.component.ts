@@ -5,6 +5,7 @@ import { Categories} from '../categories';
 import { CATEGORIES } from '../mock-categories';
 
 import { VideoService } from '../video.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-liste-videos',
@@ -12,14 +13,17 @@ import { VideoService } from '../video.service';
   styleUrls: ['./liste-videos.component.css']
 })
 export class ListeVideosComponent implements OnInit{
-  videos: Video[] = [];
+  videos: Video[] =  VIDEOS;
   categorie: Categories[] = CATEGORIES;
 
-  constructor(private videoService: VideoService) { }
-
+  constructor(private videoService: VideoService, ) { 
+  
+  }
   ngOnInit(): void {
     this.getVideos();
   }
+
+  
 
   getVideos(): void {
     this.videoService.getVideos()
@@ -27,6 +31,6 @@ export class ListeVideosComponent implements OnInit{
       console.log(resultat);
       this.videos = resultat;
     });
-    }
+  }
     
 }

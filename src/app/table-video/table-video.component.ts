@@ -5,6 +5,8 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { FormulaireVideoComponent } from '../formulaire-video/formulaire-video.component';
 
 
 
@@ -17,7 +19,7 @@ import { NgForm } from '@angular/forms';
 })
 export class TableVideoComponent implements OnInit{
   dataSourceVideos: MatTableDataSource<Video> = new MatTableDataSource();
-  columnsToDisplay = ['nom', 'description', 'actions'];
+  columnsToDisplay = ['nom',  'actions'];
 
   @ViewChild(MatTable) tableVideos!: MatTable<Video>;
 
@@ -29,8 +31,8 @@ export class TableVideoComponent implements OnInit{
                    description: '', 
                    code: '', 
                    nomCategorie: [], 
-                   auteur:  {nom:'', description: '', verifier:''},
-                   datePublication: new Date(),
+                   auteur:  {id:1, nom:'', description: '', verifier:''},
+                   datePublication: new Date().toString(),
                    duree: 0,
                    nombreVues: 0,
                    score_video: 0,
@@ -40,10 +42,27 @@ export class TableVideoComponent implements OnInit{
 
                   };
 
-  constructor(private videoService: VideoService) { }
+  constructor(private videoService: VideoService, public dialog: MatDialog) { }
     ngOnInit(): void {
     this.getVideos()
   }
+
+  showFormVideo(video: Video) {
+    this.video = video;
+  }
+
+  updateVideo(videoForm: NgForm) {
+      if (videoForm.valid) {
+        this.videoService.updateVideo(this.video).subscribe(_ => {
+        videoForm.resetForm();
+          /*this.getVideos();
+          this._snackBar.open("Héro modifié!", undefined, {
+          duration: 2000
+          });*/
+        });
+      }
+  }
+    
 
   getVideos() {
     this.videoService.getVideos().subscribe(
@@ -59,6 +78,20 @@ export class TableVideoComponent implements OnInit{
       this.tableVideos.renderRows();
     });
   }
+
+  openDialog(video?: Video) {
+    console.log(video);
+    const dialogRef = this.dialog.open(FormulaireVideoComponent, {
+    data: video,
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    console.log('Le dialog du formulaire de video a été fermé');
+    this.getVideos();
+    });
+    }
+
+
+
 
   addVideo(videoForm: NgForm) {
     if (videoForm.valid) {

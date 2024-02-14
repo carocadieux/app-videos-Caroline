@@ -42,6 +42,7 @@ import { VideoCategoriePipe } from './video-categorie.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { VideoService } from './video.service';
 import { TableVideoComponent } from './table-video/table-video.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -86,6 +87,7 @@ import { TableVideoComponent } from './table-video/table-video.component';
     MatPaginatorModule,
     MatSortModule,
     CommonModule,
+    MatDialogModule,
     
     
     

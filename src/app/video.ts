@@ -6,12 +6,13 @@ import { Categories } from './categories';
 
 
 export interface Video {
+    id?: string;
     nom: string;
     description: string;
     code: string;
     nomCategorie: string[];
     auteur: Utilisateur;
-    datePublication: Date;
+    datePublication: string;
     duree: number;
     nombreVues: number;
     avis: Avis[];

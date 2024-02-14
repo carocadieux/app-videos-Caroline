@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Video } from '../video';
+import { VideoService } from '../video.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -9,6 +11,7 @@ import { Video } from '../video';
 })
 export class VideoComponent {
  @Input() video:Video = {
+    id: "",
     url_image: "",
     sous_titres: [],
     nom: "",
@@ -21,14 +24,8 @@ export class VideoComponent {
       description: "",
       verifier: '',
     },
-    datePublication: new Date(),
-    duree: 
-      {
-        max: 0,
-        min: 0,
-        step: 0,
-        value: 0,
-    },
+    datePublication: new Date().toString(),
+    duree: 0,
   
     nombreVues: 0,
     avis: [
@@ -40,6 +37,22 @@ export class VideoComponent {
     
                     
   };
+
+
+  constructor(private videoService: VideoService, private route: ActivatedRoute) { 
+    const id = this.route.snapshot.paramMap.get('id');
+      if(id) {
+        console.log(id);
+        this.getVideo(id);
+      }
+    }
+
+
+    getVideo(id: string): void {
+      this.videoService.getVideo(id)
+      .subscribe(resultat => this.video = resultat);
+      
+    }
 
  
 
