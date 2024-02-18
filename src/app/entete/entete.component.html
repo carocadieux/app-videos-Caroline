@@ -1,15 +1,16 @@
 <mat-toolbar color="accent">
-    <a routerLink="''"><span class="material-icons">
-        theaters
+    <a routerLink=""><span class="material-icons">
+        home
         </span>
     </a>
     <a routerLink="/tableau">Administration</a>
-    <section class="recherche">
+    <a routerLink="/aPropos">À Propos</a>
+    <!--<section class="recherche">
         <span class="material-icons">
             search 
         </span>
         <p>Recherche</p>
-    </section>
+    </section>-->
     <section class="user">
         <app-utilisateur [user]="user[0]"></app-utilisateur>
     </section>

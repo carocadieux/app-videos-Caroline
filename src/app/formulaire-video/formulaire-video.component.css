@@ -2,3 +2,12 @@
     display: block;
     width: 100%;
 }
+
+.perso-form{
+    width: 100%;
+}
+
+.bouton-form{
+    margin: 10px;
+    border: 1px solid black;
+}

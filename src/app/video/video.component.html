@@ -18,7 +18,7 @@
       <p>Code: {{ video.code }}</p>
       <p>Score vidéo:{{video.score_video}}</p>
       <ng-container>
-        <p  matTooltip={{video.nombreVues}}>{{ video.nombreVues | nbDeVues   }}</p>
+        <p  [matTooltip]="parseFloatWrapper(video.nombreVues | nbDeVues).toString()" i18nPlural="messages">{{ video.nombreVues | nbDeVues }}</p>
       </ng-container>
       <p>Durée: {{ video.duree }} seconds</p>
     </section>

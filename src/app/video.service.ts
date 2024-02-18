@@ -4,6 +4,7 @@ import { Video } from './video';
 import { Observable } from 'rxjs';
 import { formatDate } from '@angular/common';
 
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -19,10 +20,18 @@ export class VideoService {
 
   getVideo(id: string): Observable<Video> {
     return this.http.get<Video>(`${this.API_URL}/?id=${id}`);
+
   }
 
   getVideos(): Observable<Video[]> {
-    return this.http.get<Video[]>(this. API_URL);
+    return this.http.get<Video[]>(this. API_URL)
+
+
+    
+  }
+
+  getAvis(id: string): Observable<Video[]> {
+    return this.http.get<Video[]>(`${this.API_URL}/?id=${id}`);
   }
 
   addVideo(video:Video): Observable<void> {

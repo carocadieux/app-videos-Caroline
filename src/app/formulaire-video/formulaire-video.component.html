@@ -1,10 +1,10 @@
 <form #videoForm="ngForm">
-    <mat-form-field>
+    <mat-form-field class="perso-form">
         <mat-label>Nom du vidéo</mat-label>
         <input matInput type="text" name="nom" [(ngModel)]="video.nom">
     </mat-form-field><br>
 
-    <mat-form-field>
+    <mat-form-field class="perso-form">
         <mat-label>Description</mat-label>
         <textarea matInput type="text" name="description" [(ngModel)]="video.description"></textarea>
     </mat-form-field><br>
@@ -34,12 +34,12 @@
         </mat-autocomplete>
     </mat-form-field>-->
 
-    <mat-form-field>
+    <mat-form-field class="perso-form">
         <mat-label>Code</mat-label>
         <input matInput type="text" name="code" [(ngModel)]="video.code">
     </mat-form-field><br>
 
-    <mat-form-field class="example-full-width">
+    <!--<mat-form-field class="example-full-width">
         <mat-label>Choisir la date</mat-label>
         <input matInput [matDatepicker]="picker">
         <mat-hint>MM/DD/YYYY</mat-hint>
@@ -47,7 +47,7 @@
           <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
         </mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
+    </mat-form-field>-->
 
     <!--<mat-card>
         <mat-card-content>
@@ -96,7 +96,7 @@
 
 
       
-      <mat-form-field>
+      <mat-form-field class="perso-form">
         <mat-label>Sous-titres</mat-label>
         <select matNativeControl required>
           <option value="Aucun">Aucun</option>
@@ -109,38 +109,45 @@
 
 <form>
 
-      <mat-form-field>
+      <!--<mat-form-field>
         <mat-label>auteur</mat-label>
         <input matInput type="text" name="auteur" [(ngModel)]="video.auteur">
-      </mat-form-field>
+      </mat-form-field>-->
 
-      <mat-form-field>
+      <mat-form-field class="perso-form">
         <mat-label>nombre de vues</mat-label>
         <input matInput type="text" name="nombre de vues" [(ngModel)]="video.nombreVues">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class="perso-form">
         <mat-label>score</mat-label>
         <input matInput type="text" name="score" [(ngModel)]="video.score_video">
       </mat-form-field>
 
-      <mat-form-field>
+      <!--<mat-form-field>
         <mat-label>avis</mat-label>
         <input matInput type="text" name="avis" [(ngModel)]="video.avis">
-      </mat-form-field>
-      <button (click)="get();" mat-stroked-button>Soumettre</button>
+      </mat-form-field>-->
+
+      <button class="bouton-form" (click)="get();" mat-stroked-button>Soumettre</button>
 
 
-      <button mat-button mat-aria-label="Annuler" [mat-dialog-close]="true">
+      <button class="bouton-form" mat-button mat-aria-label="Annuler" [mat-dialog-close]="true">
         Annuler
       </button>
 
-      <button *ngIf="video.id; else boutonAjout" mat-button mat-aria-label="Modifier"
-        [disabled]="!videoForm.form.valid" (click)="updateVideo(videoForm)">Modifier</button>
-        <ng-template #boutonAjout>
-        <button mat-button mat-aria-label="Ajouter"
-        [disabled]="!videoForm.form.valid" (click)="addVideo(videoForm)">Créer</button>
-        </ng-template>
+      <button class="bouton-form" *ngIf="video.id; else boutonAjout" mat-button mat-aria-label="Modifier"
+      [disabled]="!videoForm.form.valid" (click)="updateVideo(videoForm)">  
+        Modifier
+      </button>
+
+        
+      <ng-template #boutonAjout>
+        <button class="bouton-form" mat-button mat-aria-label="Ajouter"
+        [disabled]="!videoForm.form.valid" (click)="addVideo(videoForm)">
+        Créer
+        </button>
+      </ng-template>
         
 </form>
 

@@ -7,15 +7,15 @@ import { Video } from './video';
 export class NbDeVuesPipe implements PipeTransform {
   
 
-  transform(nbDeVues: Video["nombreVues"]): string {
+  transform(nbDeVues: Video["nombreVues"]): number | string{
     
   
     if (nbDeVues < 1000) {
-      return nbDeVues.toString();
+      return nbDeVues;
     } else if (nbDeVues < 1000000) {
-      return (nbDeVues / 1000).toFixed(0) + 'k';
+      return parseFloat((nbDeVues / 1000).toFixed(0)) + 'k';
     } else {
-      return (nbDeVues / 1000000).toFixed(0) + 'M';
+      return parseFloat((nbDeVues / 1000000).toFixed(0)) + 'M';
     }
   }
 

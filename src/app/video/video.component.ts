@@ -4,12 +4,14 @@ import { VideoService } from '../video.service';
 import { ActivatedRoute } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.css']
 })
 export class VideoComponent {
+[x: string]: any;
  @Input() video:Video = {
     id: "",
     url_image: "",
@@ -38,6 +40,14 @@ export class VideoComponent {
                     
   };
 
+  messages = {
+    '=0': `Aucun visionnement`,
+    '=1': `1 visionnement`,
+    'other': `{count} visionnements`
+    
+  };
+  
+
 
   constructor(private videoService: VideoService, private route: ActivatedRoute) { 
     const id = this.route.snapshot.paramMap.get('id');
@@ -51,10 +61,19 @@ export class VideoComponent {
     getVideo(id: string): void {
       this.videoService.getVideo(id)
       .subscribe(resultat => this.video = resultat);
+
       
     }
 
- 
+    /*getAvis(id: string): void {
+      this.videoService.getAvis(id)
+      .subscribe(resultat => this.video.avis = resultat);
+      
+    }*/
+
+    parseFloatWrapper(value: any): number {
+      return parseFloat(value);
+    }
 
   
 

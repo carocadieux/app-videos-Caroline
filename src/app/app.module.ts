@@ -43,6 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { VideoService } from './video.service';
 import { TableVideoComponent } from './table-video/table-video.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AProposComponent } from './a-propos/a-propos.component';
+
+import { I18nPluralPipe } from '@angular/common'; // Importez I18nPluralPipe
 
 
 
@@ -62,7 +65,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     NbDeVuesPipe,
     PopularScoreVideosPipe,
     VideoCategoriePipe,
-    TableVideoComponent
+    TableVideoComponent,
+    AProposComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +96,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     
     
   ],
-  providers: [VideoService],
-  bootstrap: [AppComponent]
+  providers: [VideoService, I18nPluralPipe],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

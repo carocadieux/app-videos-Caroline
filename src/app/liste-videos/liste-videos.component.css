@@ -1,33 +1,25 @@
 :host{
-  display: flex;
+  display: block;
   
 }
 
 
 
-  .video-details {
-    display: block; 
-    margin-top: 10px; 
-  }
-  .menu-liste{
-    width: 30%;
-    margin: 10px 30px 10px 10px;
-  }
+ 
+ 
 
   .categories{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin: 20px;
   }
   mat-chip{
     margin: 0 20px;
   }
 
-  .formulaire{
-   
-    margin-top: 10px;
-  }
+  
 
+ 
  
  
   

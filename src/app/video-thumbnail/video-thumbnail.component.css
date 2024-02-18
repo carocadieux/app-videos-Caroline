@@ -10,4 +10,7 @@ img {
   .hot{
     color: rgb(231, 79, 32);
   }
+  .cold{
+    color: rgb(108, 108, 250);
+  }
   
