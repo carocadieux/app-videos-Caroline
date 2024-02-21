@@ -30,8 +30,8 @@ export class VideoService {
     
   }
 
-  getAvis(id: string): Observable<Video[]> {
-    return this.http.get<Video[]>(`${this.API_URL}/?id=${id}`);
+  getAvis(id: string): Observable<Video['avis']> {
+    return this.http.get<Video['avis']>(`${this.API_URL}/avis/?id=${id}`);
   }
 
   addVideo(video:Video): Observable<void> {
@@ -41,7 +41,7 @@ export class VideoService {
 
   updateVideo(video: Video): Observable<void> {
     return this.http.put<void>(`${this.API_URL}?id=${video.id}`, video, httpOptions);
-    }
+  }
     
 
   deleteVideo(id: string): Observable<void> {

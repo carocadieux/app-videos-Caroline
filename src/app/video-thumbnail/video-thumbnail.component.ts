@@ -32,4 +32,14 @@ export class VideoThumbnailComponent {
     ]
                     
   };
+
+  messages = {
+    '=0': `Aucun visionnement`,
+    '=1': `1 visionnement`,
+    'other': `# visionnements`
+    
+  };
+
+
+ 
 }

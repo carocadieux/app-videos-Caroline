@@ -55,10 +55,6 @@ export class TableVideoComponent implements OnInit{
       if (videoForm.valid) {
         this.videoService.updateVideo(this.video).subscribe(_ => {
         videoForm.resetForm();
-          /*this.getVideos();
-          this._snackBar.open("Héro modifié!", undefined, {
-          duration: 2000
-          });*/
         });
       }
   }
@@ -84,23 +80,24 @@ export class TableVideoComponent implements OnInit{
     const dialogRef = this.dialog.open(FormulaireVideoComponent, {
     data: video,
     });
-    dialogRef.afterClosed().subscribe(result => {
+
+    dialogRef.afterClosed().subscribe(_result => {
     console.log('Le dialog du formulaire de video a été fermé');
     this.getVideos();
     });
-    }
+  }
 
 
 
 
-  addVideo(videoForm: NgForm) {
+ /* addVideo(videoForm: NgForm) {
     if (videoForm.valid) {
       this.videoService.addVideo(this.video).subscribe(_ => {
         videoForm.resetForm();
         this.getVideos();
       });
     }
-  }
+  }*/
 
   deleteVideo(id: string) {
     this.videoService.deleteVideo(id).subscribe(

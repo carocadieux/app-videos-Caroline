@@ -68,6 +68,11 @@ export class FormulaireVideoComponent {
       }
     }
 
+    showFormVideo(video: Video) {
+      this.video = video;
+    }
+      
+
     updateVideo(videoForm: NgForm) {
       if (videoForm.valid) {
         this.videoService.updateVideo(this.video).subscribe(

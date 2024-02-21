@@ -2,20 +2,23 @@ import { Component, Input, OnInit} from '@angular/core';
 import { Video } from '../video';
 import { VIDEOS } from '../mock-videos';
 import { Categories } from '../categories';
-
-
 import { VideoService } from '../video.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
-  selector: 'app-liste-videos-thumbnail',
-  templateUrl: './liste-videos-thumbnail.component.html',
-  styleUrls: ['./liste-videos-thumbnail.component.css']
+  selector: 'app-categories-videos',
+  templateUrl: './categories-videos.component.html',
+  styleUrls: ['./categories-videos.component.css']
 })
-export class ListeVideosThumbnailComponent  implements OnInit{
+export class CategoriesVideosComponent implements OnInit{
+  categorie="";
   videos: Video[] = VIDEOS;
 
-  constructor(private videoService: VideoService) { }
-
+  constructor(private videoService: VideoService, private route: ActivatedRoute) {
+    const id = this.route.snapshot.paramMap.get('categorie');
+   }
+  
   ngOnInit(): void {
     this.getVideos();
   }
@@ -27,7 +30,8 @@ export class ListeVideosThumbnailComponent  implements OnInit{
       
     
 
-  @Input() categorie: Categories = {
+ /* @Input() categorie: Categories = {
     nomCategorie: "",
-  };
+  };*/
 }
+

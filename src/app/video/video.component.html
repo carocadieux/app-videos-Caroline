@@ -4,12 +4,13 @@
     <img  class="image-detail" [src]="video.url_image" alt="">
 
     <section class="infos-chiffres">
-      <div *ngFor="let sous_titres of video.sous_titres"></div>
-      <span *ngIf="video.sous_titres.includes('cc'); else stIconTemplate">
-        <span class="material-icons">
-          closed_caption
+      <div *ngFor="let sous_titres of video.sous_titres">
+        <span *ngIf="video.sous_titres.includes('cc'); else stIconTemplate">
+          <span class="material-icons">
+            closed_caption
+          </span>
         </span>
-      </span>
+      </div>
       <ng-template #stIconTemplate>  
           <span class="material-icons">
             subtitles
@@ -18,9 +19,9 @@
       <p>Code: {{ video.code }}</p>
       <p>Score vidéo:{{video.score_video}}</p>
       <ng-container>
-        <p  [matTooltip]="parseFloatWrapper(video.nombreVues | nbDeVues).toString()" i18nPlural="messages">{{ video.nombreVues | nbDeVues }}</p>
+        <p  [matTooltip]="video.nombreVues | i18nPlural: messages">{{ video.nombreVues | nbDeVues }}</p>
       </ng-container>
-      <p>Durée: {{ video.duree }} seconds</p>
+      <p>Durée: {{ video.duree | durationFormat}} seconds</p>
     </section>
 
     <section class="infos-film">
@@ -45,10 +46,11 @@
     
     <section class="avis">
       <h3>Avis:</h3>
-      <ul *ngFor="let avis of video.avis">
-        <li>Note: {{ avis.note }}</li>
-        <li>Commentaires: {{ avis.commentaires }}</li>
-      </ul>
+      
+      <div *ngFor="let avis of video.avis">
+        <p>Note: {{ avis.note }}</p>
+        <p>Commentaires: {{ avis.commentaires }}</p>
+      </div>
     </section>
 
 </div>

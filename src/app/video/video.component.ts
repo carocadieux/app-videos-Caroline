@@ -43,7 +43,7 @@ export class VideoComponent {
   messages = {
     '=0': `Aucun visionnement`,
     '=1': `1 visionnement`,
-    'other': `{count} visionnements`
+    'other': `# visionnements`
     
   };
   
@@ -54,6 +54,7 @@ export class VideoComponent {
       if(id) {
         console.log(id);
         this.getVideo(id);
+        this.getAvis(id);
       }
     }
 
@@ -65,11 +66,12 @@ export class VideoComponent {
       
     }
 
-    /*getAvis(id: string): void {
+    getAvis(id: string): void {
       this.videoService.getAvis(id)
       .subscribe(resultat => this.video.avis = resultat);
       
-    }*/
+      
+    }
 
     parseFloatWrapper(value: any): number {
       return parseFloat(value);

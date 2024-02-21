@@ -45,7 +45,9 @@ import { TableVideoComponent } from './table-video/table-video.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AProposComponent } from './a-propos/a-propos.component';
 
-import { I18nPluralPipe } from '@angular/common'; // Importez I18nPluralPipe
+import { I18nPluralPipe } from '@angular/common';
+import { DurationFormatPipe } from './duration-format.pipe';
+import { CategoriesVideosComponent } from './categories-videos/categories-videos.component'; // Importez I18nPluralPipe
 
 
 
@@ -66,7 +68,9 @@ import { I18nPluralPipe } from '@angular/common'; // Importez I18nPluralPipe
     PopularScoreVideosPipe,
     VideoCategoriePipe,
     TableVideoComponent,
-    AProposComponent
+    AProposComponent,
+    DurationFormatPipe,
+    CategoriesVideosComponent
   ],
   imports: [
     BrowserModule,
