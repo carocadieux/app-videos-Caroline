@@ -7,7 +7,7 @@
         <ng-container *ngFor="let c of categorie">
             <mat-chip>
                 <div>
-                    <app-categories routerLink="/categories/{{c}}"></app-categories>
+                    <app-categories routerLink="/categories/{{c.nomCategorie}}" [categorie]="c"></app-categories>
                 </div>
             </mat-chip>
         </ng-container>

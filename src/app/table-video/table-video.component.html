@@ -1,30 +1,6 @@
 
     
 
-
-    <!--form #videoForm="ngForm">
-        <mat-form-field>
-            <mat-label>Video</mat-label>
-            <input matInput placeholder="Ex. Nom du video" required minlength="2" maxlength="50" name="nom"
-            [(ngModel)]="video.nom" #nom="ngModel" (keyup.enter)="addVideo(videoForm)">
-        </mat-form-field>
-
-
-        
-            
-
-        <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">
-            Le nom est obligatoire.
-        </mat-error>
-        <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('minlength')">
-            Le nom doit contenir au moins 2 caractères.
-        </mat-error>
-        <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('maxlength')">
-            Le nom doit contenir au maximum 50 caractères.
-        </mat-error>
-
-       
-    </form>-->
     <button mat-fab color="primary" (click)="openDialog(undefined)" aria-label="Ajouter" >
         <mat-icon>add</mat-icon>
     </button>

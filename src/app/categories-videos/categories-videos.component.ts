@@ -12,11 +12,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./categories-videos.component.css']
 })
 export class CategoriesVideosComponent implements OnInit{
-  categorie="";
+  categorie:string="";
   videos: Video[] = VIDEOS;
 
   constructor(private videoService: VideoService, private route: ActivatedRoute) {
-    const id = this.route.snapshot.paramMap.get('categorie');
+    this.categorie = this.route.snapshot.paramMap.get("categorie")!;
    }
   
   ngOnInit(): void {
